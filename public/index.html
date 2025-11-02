@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pasteleria Sweet Tentation</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+    
+    <div class="site">
+
+        <header class="site-header" role="banner">
+            <div class="header-inner">
+                <div class="brand">
+                    <h1>Pastelería <span class="accent">Sweet Tentation</span></h1>
+                    <p class="slogan">Dulce es poco, esto es irresistible.</p>
+                </div>
+
+                <div class="header-actions">
+                    <button id="cart-toggle" class="cart-btn" aria-label="Abrir carrito" aria-expanded="false">
+                        🛒
+                        <span id="cart-count" class="cart-count" aria-live="polite">0</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="site-main" role="main">
+            <div class="layout">
+
+                <section id="product-container">
+
+                </section> <!--Inyeccion de las carticas-->
+                
+                <aside class="cart" id="cart" aria-label="Carrito de compras">
+                    <div class="cart-inner">
+                        <h2>Carrito</h2>
+                        <div id="cart-items" class="cart-items">
+                            <!-- JS inyecta los items aqui -->
+                            <p class="empty">Tu carrito está vacío</p>
+                        </div>
+
+                        <div class="cart-summary">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <strong id="cart-subtotal">$0</strong>
+                            </div>
+                            <div class="summary-actions">
+                                <button id="clear-cart" class="clear-btn">Vaciar carrito</button>
+                                <button id="checkout" class="checkout-btn">Pagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>    
+        </main>
+
+        <footer class="site-footer" role="contentinfo">
+            <div class="footer-inner">
+                <p>&copy; <span id="year"></span> Pastelería Sweet Tentation — Sofia Ballen.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+
+</html>
